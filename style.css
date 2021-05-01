@@ -1,0 +1,28 @@
+.jumbotron {
+  /* padding: 2rem 1rem; */
+  /* pading atas bawah 2rem, kiri kanan 1rem */
+  padding-top: 6rem;
+  background-color: #f5f0ae;
+}
+
+#projects {
+  background-color: #f5f0ae;
+}
+
+/* saat klik contact maka tulisan Contact Me tertutup karna navbar fix-top, maka kasih pading top semua sectionnya */
+
+section {
+  padding-top: 5rem;
+}
+
+#carouselExampleIndicators {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-inner img {
+  height: 100vh;
+  /* border: #f5f0ae; */
+}

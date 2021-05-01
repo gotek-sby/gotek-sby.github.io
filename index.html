@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+
+    <!-- Bootstrap CSS ICON https://icons.getbootstrap.com/ -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css" />
+
+    <!-- buat css sendiri untuk jumbotron -->
+    <link rel="stylesheet" href="style.css" />
+    <title>My Portfolio | Ray</title>
+
+    <!-- coba buat css manual, nanti gak perlu karna sdh pake bootstrap -->
+    <!-- <style>
+        h1 {
+            text-align: center;
+            color: blue;
+        }
+    </style> -->
+  </head>
+  <body id="home">
+    <!-- buat navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top" style="background-color: #c0ad57">
+      <!--aslinya  <nav class="navbar navbar-expand-lg navbar-light bg-light"> -->
+      <!--kalo mau biru  <nav class="navbar navbar-expand-lg navbar-light bg-light"> -->
+      <!-- fixed-top agar tetap diatas saat di scrool, saat kasih maka akan naik bagian bawahnya, gambar foto dll, maka di css   padding-top: 2rem; ditambah 5rem -->
+      <div class="container">
+        <!-- <div class="container-fluid"> hapus -fluid agar geser agak tengah -->
+        <a class="navbar-brand" href="#">GoTek</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <!-- <ul class="navbar-nav"> ms-auto agar menu2 pindah kanan-->
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home">Home</a>
+              <!-- link nya nempel di id, kasih body id home atas -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- akhir navbar -->
+
+    <!-- jumbotron -->
+    <section class="jumbotron text-center">
+      <!-- text-center agar semua di jumbotron ke tengah -->
+      <!-- untuk gambar profil -->
+      <img src="img/profil.png" alt="Ganteng kan?" width="200" class="rounded-circle img-thumbnail" />
+      <!-- class="rounded-circle" agar lingkaran (kalau mau benar2 bulat, gambar hrs persegi). kalau mau ada border pd gambar ke getbootstrap cari image https://getbootstrap.com/docs/5.0/content/images/ ternyata tambah class img-thumbnail -->
+      <!-- untuk mengatur  gambar https://squoosh.app/ -->
+
+      <h1 class="display-4">GoTek</h1>
+      <p class="lead">Web Design | Web Programmer</p>
+      <!-- buat putih bergelombang dari https://getwaves.io/ -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#ffffff"
+          fill-opacity="1"
+          d="M0,160L48,133.3C96,107,192,53,288,69.3C384,85,480,171,576,192C672,213,768,171,864,144C960,117,1056,107,1152,85.3C1248,64,1344,32,1392,16L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+    <!-- akhir jumbotron -->
+
+    <!-- buat section about -->
+    <section id="about">
+      <!-- https://getbootstrap.com/docs/5.0/layout/grid/ -->
+      <div class="container">
+        <div class="row text-center mb-3">
+          <!-- agar pososi tengah tambah  text-center-->
+          <div class="col">
+            <h2>About me</h2>
+          </div>
+        </div>
+        <!-- baris ke-2 yg isinya 2 colom -->
+        <div class="row justify-content-center fs-5 text-center">
+          <!-- kalo bootstrap penuh kanan ke kiri itu 12, kalo ada 2 colom brarti masing2 6, atau kalau tidak mau full dari kanan ke kiri, misal mau 4 dan 4, boleh tapi kasih justify-content-center  lihat https://getbootstrap.com/docs/5.0/layout/columns/ -->
+
+          <!-- kalau mau ukuran font agak besar https://getbootstrap.com/docs/5.0/getting-started/introduction/ seach font-size https://getbootstrap.com/docs/5.0/utilities/text/#font-size ada fs-1-6 trus buat rata tengah text-center-->
+
+          <!-- misal dalam row yg atas kasih margin, mt, mb, ms (margin left/start), me (margin end/right), my (margin sumbu y), mx (margin sumbu y), kalau m saja maka margin di keempat sisinya (kanan, kiri, atas, bawah), nilainya 0-5, lengkapnya https://getbootstrap.com/docs/5.0/utilities/spacing/   -->
+
+          <div class="col-md-4"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis placeat nobis voluptate commodi non vel eum facilis optio quaerat rerum.</p></div>
+          <!-- col-md-4 artinya ukuran kolom 4 dan responsive md https://getbootstrap.com/docs/5.0/layout/breakpoints/ -->
+          <div class="col-md-4"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ullam temporibus, ea atque repudiandae alias neque quasi vero quos fugiat?.</p></div>
+        </div>
+      </div>
+      <!-- getwaves.io -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#f5f0ae"
+          fill-opacity="1"
+          d="M0,32L48,53.3C96,75,192,117,288,154.7C384,192,480,224,576,218.7C672,213,768,171,864,176C960,181,1056,235,1152,250.7C1248,267,1344,245,1392,234.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+    <!-- akhir section about -->
+
+    <!-- Project -->
+    <section id="projects">
+      <div class="container">
+        <div class="row text-center mb-3">
+          <div class="col">
+            <h2>My Projects</h2>
+          </div>
+        </div>
+        <!-- buat baris ke 2 -->
+        <div class="row justify-content-center">
+          <!--justify-content-center agar baris kedua yg 2 gambar bisa ke tengah, ada banyak selain center posisinya, justify-content-evenly, justify-content-between dll lihat di   https://getbootstrap.com/docs/5.0/layout/columns/-->
+          <div class="col-md-4 mb-3">
+            <!-- karna 12full / 4 = 3 maka baris ke 2 akan ada 3 kolom-->
+            <!-- carnya cari di bootstrap component card https://getbootstrap.com/docs/5.0/components/card/ -->
+            <!-- <div class="card" style="width: 18rem"> hapus width agar memenuhi kolom nya ukuran class="col-4  -->
+            <!-- agar responsive, https://getbootstrap.com/docs/5.0/layout/breakpoints/ tambahkan md jadi col-md-4 dan kasih margin botom 3 -->
+            <div class="card">
+              <img src="img/projects/1.jpg" class="card-img-top" alt="project1" />
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="img/projects/2.jpg" class="card-img-top" alt="project2" />
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="img/projects/3.jpg" class="card-img-top" alt="project3" />
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="img/projects/4.jpg" class="card-img-top" alt="project4" />
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="img/projects/5.jpg" class="card-img-top" alt="project5" />
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- waves/gelombang putih -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#ffffff"
+          fill-opacity="1"
+          d="M0,32L48,53.3C96,75,192,117,288,154.7C384,192,480,224,576,218.7C672,213,768,171,864,176C960,181,1056,235,1152,250.7C1248,267,1344,245,1392,234.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+    <!-- akhir Project -->
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <div class="row text-center mb-3">
+          <div class="col">
+            <h2>Contact Me</h2>
+          </div>
+        </div>
+        <!-- buat baris baru -->
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <!-- kolomnya gak penuh, ukuran 8, penuh 12 -->
+            <!-- form dari https://getbootstrap.com/docs/5.0/forms/overview/ -->
+            <form>
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" aria-describedby="name" />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" aria-describedby="email" />
+              </div>
+              <!-- text area https://getbootstrap.com/docs/5.0/forms/form-control/ tentukan row nya mau berapa baris-->
+              <div class="mb-3">
+                <label for="pesan" class="form-label">Message</label>
+                <textarea class="form-control" id="pesan" rows="3"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- gelombang -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#c0ad57"
+          fill-opacity="1"
+          d="M0,160L48,181.3C96,203,192,245,288,250.7C384,256,480,224,576,224C672,224,768,256,864,266.7C960,277,1056,267,1152,256C1248,245,1344,235,1392,229.3L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+    <!-- akhir Contact -->
+
+    <!-- footer -->
+    <footer class="text-white text-center pb-5" style="background-color: #c0ad57">
+      <!-- pb-5 pading butom 5 agar gak ada putih dibawah gelombang -->
+      <p>Created with <i class="bi bi-heart-fill text-danger"></i> by <a href="gotek.com" class="text-danger fw-bold">GoTek</a></p>
+      <!-- kalau mau tulisan bold buka doc bootstrap cari Font weight and italics https://getbootstrap.com/docs/5.0/utilities/text/#font-weight-and-italics
+ -->
+
+      <!-- misal mau ganti kata love dengan icon hati, bootstrap punya tinggal search icons https://getbootstrap.com/docs/5.0/extend/icons/#bootstrap-icons klik Learn more about Bootstrap Icons, ketik heart, cara pake nya kalo CDN maka akses icon nya secara online, copy link <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css"> copy ke atas sebelum CSS buatan kita -->
+    </footer>
+    <!-- akhir footer -->
+
+    <!-- <h1 class="text-center text-primary">Hello, world!</h1> -->
+    <!-- bootstrP V5 left right diganti start dan end -->
+    <!-- <h1 class="text-end">Hello, world!</h1> -->
+    <!-- WARNA TULISAN BISA LIHAT https://getbootstrap.com/docs/5.0/utilities/colors/ -->
+    <!-- <h1 class="text-end">Hello, world!</h1> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+  </body>
+</html>
