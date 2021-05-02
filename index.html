@@ -11,6 +11,9 @@
     <!-- Bootstrap CSS ICON https://icons.getbootstrap.com/ -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css" />
 
+    <!-- CSS AOS https://github.com/michalsnik/aos https://michalsnik.github.io/aos/ -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- buat css sendiri untuk jumbotron -->
     <link rel="stylesheet" href="style.css" />
     <title>GoTek</title>
@@ -66,7 +69,7 @@
       <!-- untuk mengatur  gambar https://squoosh.app/ -->
 
       <h1 class="display-4">GoTek</h1>
-      <p class="lead">Web Design | Web Programmer</p>
+      <p class="lead"></p>
       <!-- buat putih bergelombang dari https://getwaves.io/ -->
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
@@ -81,6 +84,8 @@
     <!-- buat section about -->
     <section id="about">
       <!-- https://getbootstrap.com/docs/5.0/layout/grid/ -->
+      <!-- <div class="container" data-aos="fade-down" data-aos-offset="300" data-aos-duration="2000"> -->
+      <!-- data-aos-offset kapan saat munculnya -->
       <div class="container">
         <div class="row text-center mb-3">
           <!-- agar pososi tengah tambah  text-center-->
@@ -96,9 +101,11 @@
 
           <!-- misal dalam row yg atas kasih margin, mt, mb, ms (margin left/start), me (margin end/right), my (margin sumbu y), mx (margin sumbu y), kalau m saja maka margin di keempat sisinya (kanan, kiri, atas, bawah), nilainya 0-5, lengkapnya https://getbootstrap.com/docs/5.0/utilities/spacing/   -->
 
-          <div class="col-md-4"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis placeat nobis voluptate commodi non vel eum facilis optio quaerat rerum.</p></div>
+          <div class="col-md-4" data-aos="fade-right" data-aos-duration="1000"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis placeat nobis voluptate commodi non vel eum facilis optio quaerat rerum.</p></div>
           <!-- col-md-4 artinya ukuran kolom 4 dan responsive md https://getbootstrap.com/docs/5.0/layout/breakpoints/ -->
-          <div class="col-md-4"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ullam temporibus, ea atque repudiandae alias neque quasi vero quos fugiat?.</p></div>
+          <div class="col-md-4" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ullam temporibus, ea atque repudiandae alias neque quasi vero quos fugiat?.</p>
+          </div>
         </div>
       </div>
       <!-- getwaves.io -->
@@ -128,7 +135,7 @@
             <!-- carnya cari di bootstrap component card https://getbootstrap.com/docs/5.0/components/card/ -->
             <!-- <div class="card" style="width: 18rem"> hapus width agar memenuhi kolom nya ukuran class="col-4  -->
             <!-- agar responsive, https://getbootstrap.com/docs/5.0/layout/breakpoints/ tambahkan md jadi col-md-4 dan kasih margin botom 3 -->
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500">
               <img src="img/projects/1.jpg" class="card-img-top" alt="project1" />
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -136,7 +143,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="100">
               <img src="img/projects/2.jpg" class="card-img-top" alt="project2" />
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -144,7 +151,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="200">
               <img src="img/projects/3.jpg" class="card-img-top" alt="project3" />
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -152,7 +159,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="300">
               <img src="img/projects/4.jpg" class="card-img-top" alt="project4" />
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -160,7 +167,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="400">
               <img src="img/projects/5.jpg" class="card-img-top" alt="project5" />
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -179,6 +186,71 @@
       </svg>
     </section>
     <!-- akhir Project -->
+
+    <!-- SECTION GALLERY TAMBAHAN -->
+    <section id="gallery">
+      <div class="container">
+        <div class="row text-center mb-3">
+          <div class="col">
+            <h2>Gallery</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <!-- agar 2 gambar sisa dibawah ketengah -->
+          <div class="col-md-3">
+            <a href="">
+              <img src="img/gallery/thumbnail/1.jpg" alt="" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="">
+              <img src="img/gallery/thumbnail/2.jpg" alt="" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="">
+              <img src="img/gallery/thumbnail/3.jpg" alt="" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="">
+              <img src="img/gallery/thumbnail/4.jpg" alt="" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="">
+              <img src="img/gallery/thumbnail/5.jpg" alt="" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="">
+              <img src="img/gallery/thumbnail/6.jpg" alt="" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="">
+              <img src="img/gallery/thumbnail/7.jpg" alt="" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="">
+              <img src="img/gallery/thumbnail/8.jpg" alt="" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="">
+              <img src="img/gallery/thumbnail/9.jpg" alt="" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="">
+              <img src="img/gallery/thumbnail/10.jpg" alt="" class="img-fluid gallery-img" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- AKHIR GALLERY -->
 
     <!-- Contact -->
     <section id="contact">
@@ -254,6 +326,39 @@
     <!-- <h1 class="text-end">Hello, world!</h1> -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      // titip untuk animasi AOS gallery biar ngak satu satu
+      const galleryImage = document.querySelectorAll(".gallery-img");
+      galleryImage.forEach((img, i) => {
+        img.dataset.aos = "fade-down";
+        img.dataset.aosDelay = i * 200;
+        img.dataset.aosDuration = 1000;
+      });
+      // tangkap semua elemen yg memiliki class
+      AOS.init({
+        // masukan role animation
+        once: false, // whether animation should happen only once - while scrolling down
+        duration: 1000, // values from 0 to 3000, with step 50ms (jika tidak dikasih durasi, maka pake yg default ini, tp kalau sudah ditaruh di elemenn masing2 nya maka yg dipake yg di elemen masing2)
+      });
+    </script>
+
+    <!-- GSAP https://greensock.com/get-started/ https://greensock.com/docs/v3/GSAP/Tween/vars https://greensock.com/docs/v3/Eases https://greensock.com/gsap-plugins/-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/TextPlugin.min.js"></script>
+
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.to(".lead", { duration: 2, delay: 1.5, text: "Web Design | Web Programmer" });
+      // gsap.from(".jumbotron img", { duration: 1, y: -100, opacity: 0, ease: "bounce" });
+      // keadaan awal gambar profil posisi awalnya -100 sumbu y keatas, awal opacity 0, keadaan akhir adalah posisi saat ini
+      // coba yg lain
+      gsap.from(".jumbotron img", { duration: 1, rotateY: 360, opacity: 0 });
+      gsap.from(".navbar", { duration: 1.5, y: "-100%", opacity: 0, ease: "bounce" });
+      gsap.from(".display-4", { duration: 1.5, x: -50, opacity: 0, delay: 0.5, ease: "back" });
+    </script>
+
     <script>
       const scriptURL = "https://script.google.com/macros/s/AKfycbzT22KT5CJRaa3xWLb72VdOt6EEgK8IQND4vLrr304maytrQmtmwLKfn9MIZ0aVPRAVPA/exec";
       const form = document.forms["GoTek-Contact-Form"];
